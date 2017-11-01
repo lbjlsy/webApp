@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1.0">
+  <meta name="format-detection" content="telephone=no">
+  <link rel="stylesheet" type="text/css" href="../static/css/normalize.css">
+  <link rel="stylesheet" type="text/css" href="../static/css/all.css">
+
+  <title>书城首页</title>
+</head>
+<body>
+
+<div id="app" style="width: 734px;">
+  <div class="container-warp"><% include include/header.html %></div>
+  <div class="container-scroll" style="width:1468px;transition-duration:.5s;transform:translate3d(0px,0px,0px)">
+    <div style="width:734px;float:left;">
+      <div style="top:0px;">
+        <% include include/index-top.html %>
+        <% include include/index-hot.html %>
+        <% include include/index-recommend.html %>
+        <% include include/index-female.html %>
+        <% include include/index-male.html %>
+        <% include include/index-free.html %>
+        <% include include/index-bottom.html %>
+      </div>
+    </div>
+    <div style="width:734px;float:left;">
+      <% include include/index-shelf.html %>
+    </div>
+  </div>
+</div>
+<div>hello node!js</div>
+</body>
+<script src="../static/script/vue.js"></script>
+<script src="../static/script/zepto.js"></script>
+<script src="../static/script/pages/index.js"></script>
+</html>
