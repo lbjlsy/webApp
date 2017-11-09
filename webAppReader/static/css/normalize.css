@@ -8,7 +8,9 @@ body, textarea, select, input, pre, a {
   font-size: 14px;
   color: #555;
 }
-
+html, body {
+  height: 100%;
+}
 table {
   border-collapse: collapse;
   border-spacing: 0;

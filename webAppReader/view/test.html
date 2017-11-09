@@ -1,56 +1,73 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport"
-        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0, minimal-ui">
+  <meta name="apple-mobile-web-app-capable" content="yes" />
   <title>Document</title>
+  <!--<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>-->
+  <script src="https://cdn.bootcss.com/zepto/1.2.0/zepto.min.js"></script>
+  <script>
+    window.jQuery = $;
+  </script>
 </head>
 <body>
-<ul id="example-2">
-  <li v-for="(item, index) in items">
-    {{ parentMessage }} - {{ index }} - {{ item.message }}
-  </li>
-</ul>
 
-<ul id="v-for-object" class="demo">
-  <li v-for="value in object">
-    {{ value }}
-  </li>
-</ul>
+移动端，手指滑动屏幕查看效果。
 
+<script type="text/javascript">
+  var windowHeight = document.documentElement.clientHeight,
+    body = document.body;
+  console.log(body);
+  body.offsetHeight = windowHeight;
+  var startX, startY, moveEndX, moveEndY, X, Y;
 
-<div v-if="Math.random() > 10">
-  Now you see me
-</div>
-<div v-else>
-  Now you don't
-</div>
-<script src="../static/script/vue.js"></script>
-<script>
+  /*$("body").on("touchstart", function(e) {
+    e.preventDefault();
+    startX = e.originalEvent.changedTouches[0].pageX,
+      startY = e.originalEvent.changedTouches[0].pageY;
+  });*/
+  body.addEventListener('touchstart',function(e){
+    e.preventDefault();
+    startX = e.changedTouches[0].pageX;
+    //console.log(e.changedTouches[0].pageX);
+  });
+  body.addEventListener('touchmove',function(e){
+    e.preventDefault();
 
-  var example2 = new Vue({
-    el: '#example-2',
-    data: {
-      parentMessage: 'Parent??',
-      items: [
-        { message: 'Foo' },
-        { message: 'Bar' }
-      ]
+    //console.log(e.changedTouches[0].pageX);
+  });
+  body.addEventListener('touchend',function(e){
+    e.preventDefault();
+    endEndX = e.changedTouches[0].pageX;
+    //console.log(e.changedTouches[0].pageX);
+    if(endEndX > startX) {
+      body.innerHTML = 'hahaaaaa';
     }
-  })
+  });
+  /*$("body").on("touchmove", function(e) {
+    e.preventDefault();
+    moveEndX = e.originalEvent.changedTouches[0].pageX,
+      moveEndY = e.originalEvent.changedTouches[0].pageY,
+      X = moveEndX - startX,
+      Y = moveEndY - startY;
 
-  new Vue({
-    el: '#v-for-object',
-    data: {
-      object: {
-        firstName: 'John',
-        lastName: 'Doe',
-        age: 30
-      }
+    if ( Math.abs(X) > Math.abs(Y) && X > 0 ) {
+      alert("left 2 right");
     }
-  })
+    else if ( Math.abs(X) > Math.abs(Y) && X < 0 ) {
+      alert("right 2 left");
+    }
+    else if ( Math.abs(Y) > Math.abs(X) && Y > 0) {
+      alert("top 2 bottom");
+    }
+    else if ( Math.abs(Y) > Math.abs(X) && Y < 0 ) {
+      alert("bottom 2 top");
+    }
+    else{
+      alert("just touch");
+    }
+  });*/
 </script>
 </body>
 </html>

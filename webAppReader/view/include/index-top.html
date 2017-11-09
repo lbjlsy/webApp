@@ -1,15 +1,34 @@
+<style type="text/css">
+
+
+</style>
 <section class="top-home">
   <a href="/search">
     <div class="top-home__search">输入书名/作者/关键字</div>
   </a>
-  <div class="slider-banner">
-    <div>
-      <a href="">
-        <img class="cover" src="http://image.read.duokan.com/mfsv2/download/fdsc3/p01V1KHze11Q/lb3QSrqV6N2qpI.jpg"
-             alt="">
-      </a>
-    </div>
-  </div>
+  <!--<div style="overflow: hidden;width: {{ doubler_screen_width }}px;transition-duration:{{ banner_duration }}s;transform:translate3d({{ banner_position }}px,0px,0px)">-->
+    <!--<div class="slider-banner" style="float: left;position: relative;width: {{ screen_width }}px;">-->
+      <div style="width: {{ screen_width }};">
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <a href="">
+              <img class="cover" src="http://image.read.duokan.com/mfsv2/download/fdsc3/p01V1KHze11Q/lb3QSrqV6N2qpI.jpg"
+                   alt="">
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a href="">
+              <img class="cover" src="http://image.read.duokan.com/mfsv2/download/fdsc3/p01t3HFw4zGY/cRQkpvrTm5bJJB.jpg"
+                   alt="">
+            </a>
+          </div>
+        </div>
+      </div>
+      </div>
+    <!--</div>-->
+    <!--<div class="slider-banner" style="float: left;position: relative;width: {{ screen_width }}px;"></div>-->
+  <!--</div>-->
   <ul class="top-home__btn">
     <li>
       <a href="/male">

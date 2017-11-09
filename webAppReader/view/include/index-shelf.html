@@ -1,4 +1,159 @@
 <style type="text/css">
+  .shelf {
+    position: relative;
+    overflow: hidden;
+  }
+  .shelf__top {
+    padding: 10px 20px 0;
+  }
+
+  .shelf__search {
+    line-height: 36px;
+    border: 1px solid #eee;
+    color: #ccc;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    padding-left: 33px;
+    background: url(../../static/img/search.png) no-repeat 10px center;
+    -webkit-background-size: 14px;
+    background-size: 14px;
+    font-size: 12px;
+    margin-right: 45px;
+  }
+
+  .shelf__switch {
+    border: 1px solid #eee;
+    width: 36px;
+    height: 36px;
+    float: right;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    background: url(../../static/img/lattice.png) no-repeat 10px center;
+    -webkit-background-size: 16px;
+    background-size: 16px;
+    -margin-right: 10px;
+  }
+  .shelf__book {
+  }
+  .shelf__book li {
+    border-bottom: 1px solid #f0f0f0;
+  }
+  .shelf__list {
+    padding: 13px 20px;
+    -position: relative;
+    overflow: hidden;
+  }
+  .shelf__cover {
+    position: relative;
+    float: left;
+    width: 6.5rem;
+    height: 8.5rem;
+    overflow: hidden;
+    border: 1px solid #f0f0f0;
+    -webkit-box-shadow: 0px 6px 5px -1px #aaaaaa;
+    -moz-box-shadow: 0px 6px 5px -1px #aaaaaa;
+    box-shadow: 0px 6px 5px -1px #aaaaaa;
+    border-bottom: none;
+  }
+  .shelf__cover img {
+    width:100%;
+    height:100%;
+  }
+  .shelf__info {
+    padding-left: 120px;
+    padding-top: 15px;
+    font-size: 12px;
+  }
+  .shelf__title {
+    font-size: 16px;
+    color: #000;
+  }
+  .shelf__author {
+    margin-top: 8px;
+  }
+  .shelf__read {
+    margin-top: 8px;
+    color: #8d8d8d;
+  }
+  .shelf__newest {
+    margin-top: 8px;
+    color: #8d8d8d;
+  }
+
 
 </style>
-123
+<section class="shelf">
+  <div class="shelf__top">
+    <div class="shelf__switch"></div>
+    <a href="/search"><div class="shelf__search">输入书名/作者/关键字</div></a>
+  </div>
+  <ul class="shelf__book">
+    <li class="shelf__list">
+      <a href="" class="shelf__cover">
+        <img src="http://cover.read.duokan.com/mfsv2/download/fdsc3/p018JfdElmhO/dXn0ucFVXpvWV4.jpg!s" alt="">
+      </a>
+      <div class="shelf__info">
+        <h3 class="shelf__title">都市佣兵之王</h3>
+        <p class="shelf__author">
+          <span class="shelf__author">一壶茶水</span>
+        </p>
+        <p class="shelf__read">已读:</p>
+        <p class="shelf__newest">最新:</p>
+      </div>
+    </li>
+    <li class="shelf__list">
+      <a href="" class="shelf__cover">
+        <img src="http://cover.read.duokan.com/mfsv2/download/fdsc3/p018JfdElmhO/dXn0ucFVXpvWV4.jpg!s" alt="">
+      </a>
+      <div class="shelf__info">
+        <h3 class="shelf__title">都市佣兵之王</h3>
+        <p class="shelf__author">
+          <span class="shelf__author">一壶茶水</span>
+        </p>
+        <p class="shelf__read">已读:</p>
+        <p class="shelf__newest">最新:</p>
+      </div>
+    </li>
+    <li class="shelf__list">
+      <a href="" class="shelf__cover">
+        <img src="http://cover.read.duokan.com/mfsv2/download/fdsc3/p018JfdElmhO/dXn0ucFVXpvWV4.jpg!s" alt="">
+      </a>
+      <div class="shelf__info">
+        <h3 class="shelf__title">都市佣兵之王</h3>
+        <p class="shelf__author">
+          <span class="shelf__author">一壶茶水</span>
+        </p>
+        <p class="shelf__read">已读:</p>
+        <p class="shelf__newest">最新:</p>
+      </div>
+    </li>
+    <li class="shelf__list">
+      <a href="" class="shelf__cover">
+        <img src="http://cover.read.duokan.com/mfsv2/download/fdsc3/p018JfdElmhO/dXn0ucFVXpvWV4.jpg!s" alt="">
+      </a>
+      <div class="shelf__info">
+        <h3 class="shelf__title">都市佣兵之王</h3>
+        <p class="shelf__author">
+          <span class="shelf__author">一壶茶水</span>
+        </p>
+        <p class="shelf__read">已读:</p>
+        <p class="shelf__newest">最新:</p>
+      </div>
+    </li>
+    <li class="shelf__list">
+      <a href="" class="shelf__cover">
+        <img src="http://cover.read.duokan.com/mfsv2/download/fdsc3/p018JfdElmhO/dXn0ucFVXpvWV4.jpg!s" alt="">
+      </a>
+      <div class="shelf__info">
+        <h3 class="shelf__title">都市佣兵之王</h3>
+        <p class="shelf__author">
+          <span class="shelf__author">一壶茶水</span>
+        </p>
+        <p class="shelf__read">已读:</p>
+        <p class="shelf__newest">最新:</p>
+      </div>
+    </li>
+  </ul>
+</section>
